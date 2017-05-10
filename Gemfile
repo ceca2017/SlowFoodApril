@@ -22,7 +22,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'rspec-rails'
   gem 'database_cleaner'
-  gem 'cucumber-rails', require: false
+  gem 'cucumber-rails', '~> 1.4', '>= 1.4.5'
   gem 'coveralls', require: false
 end
 
