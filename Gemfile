@@ -17,11 +17,11 @@ gem "haml-rails", "~> 0.9"
 
 group :development, :test do
   gem 'capybara', '~> 2.13.0'
-  gem 'database_cleaner'
   gem 'pry-byebug'
   gem 'shoulda-matchers'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
+  gem 'database_cleaner'
   gem 'cucumber-rails', require: false
   gem 'coveralls', require: false
 end
