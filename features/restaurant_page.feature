@@ -11,7 +11,6 @@ Background:
 Scenario: Go to the restaurant's page
   Given I visit the landing page
   And I click on link "Goteborg Wok Sushi"
-  Then I should be on the "restaurant_path" page
   Then I should see "Goteborg Wok Sushi"
   And I should see "Address: Östrahamngatan 5"
   And I should see "Email: goteborgwok@live.se"
