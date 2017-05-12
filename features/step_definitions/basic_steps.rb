@@ -9,3 +9,11 @@ end
 Then(/^I should see link "([^"]*)"$/) do |link|
   expect(page).to have_link link
 end
+
+Given(/^I choose "([^"]*)" from drop\-down "([^"]*)"$/) do |value, dropdown|
+  select(value, from: dropdown)
+end
+
+Then(/^I should not see "([^"]*)"$/) do |content|
+  expext(page).not_to have_content content
+end
