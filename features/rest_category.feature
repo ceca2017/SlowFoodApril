@@ -9,9 +9,9 @@ Background:
     | Fast food |
 
   Given the following restaurants exist
-    | name                | address           | email               | phone         | category  |
-    | Goteborg Wok Sushi  | Östrahamngatan 5  | goteborgwok@live.se | 031-13 51 52  | sushi     |
-    | McDonalds           | Big Mac Drive     |                     |               | Fast food |
+    | name                | address           | email               | phone         | rest_category |
+    | Goteborg Wok Sushi  | Östrahamngatan 5  | goteborgwok@live.se | 031-13 51 52  | Sushi         |
+    | McDonalds           | Big Mac Drive     |                     |               | Fast food     |
 
   Given I visit the landing page
   And I choose "Sushi" from drop-down "category"
