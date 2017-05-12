@@ -3,11 +3,7 @@
   %li
     Address:
     = @restaurant.address
-  %li
-    Email:
-    = @restaurant.email
-  %li
-    Phone:
-    = @restaurant.phone
+  %li Email: #{@restaurant.email}
+  %li Phone: #{@restaurant.phone}
   = @restaurant.description
   = link_to "Full menu", '#'
