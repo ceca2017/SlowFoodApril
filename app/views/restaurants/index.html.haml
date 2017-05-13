@@ -4,6 +4,11 @@
     %title Slow Food
   %body
     %div
+      %select#category
+        - binding.pry
+        - @rest_cats.each do |cat|
+          %option #{cat.name}
+    %div
       %ul
         - @restaurants.each do |restaurant|
           %li= link_to (restaurant.name), restaurant_path(restaurant)
