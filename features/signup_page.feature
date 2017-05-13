@@ -7,7 +7,7 @@ Feature: Create a signup page
     Given I visit the landing page
     And I click on link "Sign Up"
     Then I should see "Sign Up Form"
-    And I should be on the "sign_up_path" page
+    And I should be on the "signup_index_path" page
     Given I fill in field "First Name" with "Joe"
     And I fill in field "Last Name" with "Bloggs"
     And I fill in field "Address" with "Joe's House"
