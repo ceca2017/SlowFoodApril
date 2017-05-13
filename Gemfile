@@ -27,6 +27,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem "haml-rails", "~> 0.9"
   gem 'poltergeist'
+  gem 'phantomjs'
 end
 
 group :development do
