@@ -6,7 +6,7 @@
     %div
       = form_tag(rest_cat_path, method: 'get') do
         = label_tag(:category, 'Filter by category: ')
-        = collection_select :category, :id, @rest_cats, :id, :name
+        = collection_select :category, :id, RestCategory.all, :id, :name
         = submit_tag('Filter')
     %div
       %ul

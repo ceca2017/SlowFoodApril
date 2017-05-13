@@ -9,18 +9,20 @@ Background:
     | Fast food |
 
   Given the following restaurants exist
-    | name                | address           | email               | phone         | rest_category |
-    | Goteborg Wok Sushi  | Östrahamngatan 5  | goteborgwok@live.se | 031-13 51 52  | Sushi         |
-    | McDonalds           | Big Mac Drive     |                     |               | Fast food     |
+    | name                | address           | email               | phone         | rest_category | description             |
+    | Goteborg Wok Sushi  | Östrahamngatan 5  | goteborgwok@live.se | 031-13 51 52  | Sushi         | Greatest sushi in town! |
+    | McDonalds           | Big Mac Drive     |                     |               | Fast food     |                         |
 
   Given I visit the landing page
   And I choose "Sushi" from drop-down "category_id"
+  And I click on "Filter"
 
 
 Scenario: Viewing restaurants by category
   Then I should see link "Goteborg Wok Sushi"
   And I should not see "McDonalds"
-  Given I choose "Fast food" from drop-down "category"
+  Given I choose "Fast food" from drop-down "category_id"
+  And I click on "Filter"
   Then I should see link "McDonalds"
   And I should not see "Goteborg Wok Sushi"
 
