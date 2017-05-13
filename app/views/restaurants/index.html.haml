@@ -4,10 +4,10 @@
     %title Slow Food
   %body
     %div
-      %select#category
-        - binding.pry
-        - @rest_cats.each do |cat|
-          %option #{cat.name}
+      = form_tag(rest_cat_path, method: 'get') do
+        = label_tag(:category, 'Filter by category: ')
+        = collection_select :category, :id, @rest_cats, :id, :name
+        = submit_tag('Filter')
     %div
       %ul
         - @restaurants.each do |restaurant|
