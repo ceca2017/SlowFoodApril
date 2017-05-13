@@ -15,5 +15,5 @@ Given(/^I choose "([^"]*)" from drop\-down "([^"]*)"$/) do |value, dropdown|
 end
 
 Then(/^I should not see "([^"]*)"$/) do |content|
-  expext(page).not_to have_content content
+  expect(page).not_to have_content content
 end

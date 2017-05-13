@@ -14,7 +14,7 @@ Background:
     | McDonalds           | Big Mac Drive     |                     |               | Fast food     |
 
   Given I visit the landing page
-  And I choose "Sushi" from drop-down "category"
+  And I choose "Sushi" from drop-down "category_id"
 
 
 Scenario: Viewing restaurants by category
