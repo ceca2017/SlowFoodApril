@@ -12,5 +12,4 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.where(rest_category_id: cat_chosen)
     render 'index'
   end
-
 end

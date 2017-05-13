@@ -3,8 +3,8 @@ Feature: As a potential customer
   I would like to see a map with my location.
   And I would like to see restaurants in my area
 
-@javascript
+  @javascript
 
-Scenario:
-  Given I visit the landing page
-  And I have google map loaded on the page
+  Scenario:
+    Given I visit the landing page
+    And I have google map loaded on the page
