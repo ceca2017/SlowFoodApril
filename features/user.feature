@@ -7,7 +7,8 @@ Feature: Create a signup page
     Given I visit the landing page
     And I click on link "Sign Up"
     Then I should see "Sign Up Form"
-    Given I fill in field "First Name" with "Joe"
+    Given I fill in field "Username" with "JoeBloggs"
+    And I fill in field "First Name" with "Joe"
     And I fill in field "Last Name" with "Bloggs"
     And I fill in field "Address" with "Joe's House"
     And I fill in field "Phone Number" with "012345678"
