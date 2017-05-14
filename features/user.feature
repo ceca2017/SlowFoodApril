@@ -16,3 +16,4 @@ Feature: Create a signup page
     And I fill in field "Password" with "password"
     And I fill in field "Password Confirmation" with "password"
     And I click on button "Submit"
+    Then I should see "Welcome! You have signed up successfully."
