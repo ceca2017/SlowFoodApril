@@ -11,7 +11,7 @@ Feature: Create a signup page
     And I fill in field "Last Name" with "Bloggs"
     And I fill in field "Address" with "Joe's House"
     And I fill in field "Phone Number" with "012345678"
-    And I fill in field "Email" with "joe@bloggs.com"
+    And I fill in field "E-mail" with "joe@bloggs.com"
     And I fill in field "Password" with "password"
     And I fill in field "Password Confirmation" with "password"
     And I click on button "Submit"
