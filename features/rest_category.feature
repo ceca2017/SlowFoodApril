@@ -17,7 +17,6 @@ Feature: As a visitor/user
     And I choose "Sushi" from drop-down "category_id"
     And I click on "Filter"
 
-
   Scenario: Viewing restaurants by category
     Then I should see link "Goteborg Wok Sushi"
     And I should not see "McDonalds"

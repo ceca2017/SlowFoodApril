@@ -5,7 +5,7 @@
   %body
     = link_to "Sign Up", new_user_registration_path
     %div
-      = form_tag(rest_cat_path, method: 'get') do
+      = form_tag(root_path, method: 'get') do
         = label_tag(:category, 'Filter by category: ')
         = collection_select :category, :id, RestCategory.all, :id, :name
         = submit_tag('Filter')
