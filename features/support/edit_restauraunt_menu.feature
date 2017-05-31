@@ -1,4 +1,4 @@
-Feature: Edit restaurant menu
+Feature: Edit and Delete restaurant menu
   As a restaurant owner
   In order to categorise the dishes
   I would like to be able to edit and delete my own menus
@@ -26,3 +26,15 @@ Feature: Edit restaurant menu
     And I click on link "McDonalds"
     And I click on link "Full menu"
     Then I should see "Vegan"
+
+  Scenario: Delete menu as restaurant owner
+    Given I click on link "View My Restaurant Page"
+    And I visit "max@beach_and_crusing.com" restaurants page
+    And I click on link "McDonalds"
+    And I click on link "Delete Burgers Menu"
+    And I click on link "Confirm"
+    Then I should see "Menu deleted"
+    Given I visit the landing page
+    And I click on link "McDonalds"
+    And I click on link "Full menu"
+    Then I should not see "Burgers"
