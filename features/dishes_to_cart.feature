@@ -6,14 +6,14 @@ Feature: Add dishes to menu
   Background:
     Given "benji@teabags.com" exists and has 2 restaurants belonging to 2 restaurant categories
 
-    Given the following menus exist
+    And the following menus exist
       | name                    | restaurant          |
       | Sushi Menu              | Goteborg Wok Sushi  |
       | Burgers                 | McDonalds           |
       | Breakfast menu          | McDonalds           |
       | Sushi Menu              | McDonalds           |
 
-    Given the following dishes exist
+    And the following dishes exist
       | name                    | description                             | price      | menu                      | restaurant           |
       | 7 piece sushi           | Salmon and avocado sushi pieces         | 10         | Sushi Menu                | Goteborg Wok Sushi   |
       | Giant Burger            | A burger with cheese and lettuce        | 150        | Burgers                   | McDonalds            |
@@ -25,7 +25,7 @@ Feature: Add dishes to menu
     And I click on link "McDonalds"
     And I click on link "Full menu"
     Then I should see "Giant Burger"
-    Given I click on link "Add Giant Burger to cart"
+    When I click on link "Add Giant Burger to cart"
     Then I should see "Giant Burger added to cart"
-    Given I click on link "Add Coffe to cart"
+    When I click on link "Add Coffe to cart"
     Then I should see "Coffe added to cart"
