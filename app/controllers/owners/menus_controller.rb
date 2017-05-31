@@ -14,6 +14,11 @@ class Owners::MenusController < ApplicationController
     end
   end
 
+  def edit
+    @menu = Menu.find(params[:id])
+    @restaurant = Restaurant.find(params[:restaurant_id])
+  end
+
   private
 
   def menu_params
