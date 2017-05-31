@@ -19,6 +19,14 @@ class Owners::MenusController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
   end
 
+  def update
+    @menu = Menu.find(params[:id])
+    @menu.name = menu_params[:name]
+    @menu.save
+    redirect_to edit_owners_restaurant_menu_path(params[:restaurant_id])
+    flash[:notice] = "Menu updated"
+  end
+
   private
 
   def menu_params

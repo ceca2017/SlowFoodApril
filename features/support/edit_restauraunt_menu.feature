@@ -22,4 +22,7 @@ Feature: Edit restaurant menu
     And I fill in field "Menu Name" with "Vegan"
     And I click on button "Save"
     Then I should see "Menu updated"
-    And I should see "Vegan"
+    Given I visit the landing page
+    And I click on link "McDonalds"
+    And I click on link "Full menu"
+    Then I should see "Vegan"
