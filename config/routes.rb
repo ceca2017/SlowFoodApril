@@ -12,5 +12,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :carts, only: [:index]
+  get '/add_to_cart/:dish_id/:restaurant_id', to: 'carts#add_to_cart', as: 'add_to_cart'
 end

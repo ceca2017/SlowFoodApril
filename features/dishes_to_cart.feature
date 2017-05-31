@@ -4,7 +4,7 @@ Feature: Add dishes to menu
   I would like to place it in the cart
 
   Background:
-  Given "benji@teabags.com" exists and has 2 restaurants belonging to 2 restaurant categories
+    Given "benji@teabags.com" exists and has 2 restaurants belonging to 2 restaurant categories
 
     Given the following menus exist
       | name                    | restaurant          |
