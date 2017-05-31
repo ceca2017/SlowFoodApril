@@ -23,8 +23,16 @@ class Owners::MenusController < ApplicationController
     @menu = Menu.find(params[:id])
     @menu.name = menu_params[:name]
     @menu.save
-    redirect_to edit_owners_restaurant_menu_path(params[:restaurant_id])
+    redirect_to owners_restaurant_path(params[:restaurant_id])
     flash[:notice] = "Menu updated"
+  end
+
+  def destroy
+    binding.pry
+    menu = Menu.find(params[:id])
+    menu.destroy
+    redirect_to owners_restaurant_path(params[:restaurant_id])
+    flash[:notice] = "Menu deleted"
   end
 
   private

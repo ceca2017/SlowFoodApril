@@ -25,14 +25,14 @@ Feature: Edit and Delete restaurant menu
     Given I visit the landing page
     And I click on link "McDonalds"
     And I click on link "Full menu"
-    Then I should see "Vegan"
+    And I should see "Vegan"
 
   Scenario: Delete menu as restaurant owner
     Given I click on link "View My Restaurant Page"
     And I visit "max@beach_and_crusing.com" restaurants page
     And I click on link "McDonalds"
     And I click on link "Delete Burgers Menu"
-    And I click on link "Confirm"
+    # And I confirm pop-up
     Then I should see "Menu deleted"
     Given I visit the landing page
     And I click on link "McDonalds"
