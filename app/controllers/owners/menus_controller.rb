@@ -28,7 +28,6 @@ class Owners::MenusController < ApplicationController
   end
 
   def destroy
-    binding.pry
     menu = Menu.find(params[:id])
     menu.destroy
     redirect_to owners_restaurant_path(params[:restaurant_id])

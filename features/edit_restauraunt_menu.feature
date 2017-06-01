@@ -32,7 +32,6 @@ Feature: Edit and Delete restaurant menu
     And I visit "max@beach_and_crusing.com" restaurants page
     And I click on link "McDonalds"
     And I click on link "Delete Burgers Menu"
-    # And I confirm pop-up
     Then I should see "Menu deleted"
     Given I visit the landing page
     And I click on link "McDonalds"
