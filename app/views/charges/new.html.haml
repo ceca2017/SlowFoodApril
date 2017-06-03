@@ -1,2 +1,24 @@
 - if not user_signed_in?
   %p Please login to place order
+- else
+  = form_tag charges_path do
+    %article
+      - if flash[:error].present?
+        #error_explanation
+          %p= flash[:error]
+      %label.amount
+        %span Amount: #{@total_price}
+
+    %script.stripe-button{"data-amount" => "500",
+                          "data-description" => "A month's subscription",
+                          "data-key" => "#{Rails.configuration.stripe[:publishable_key]}",
+                          "data-locale" => "auto",
+                          :src => "https://checkout.stripe.com/checkout.js"}
+
+
+
+    -# <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    -#         data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    -#         data-description="A month's subscription"
+    -#         data-amount="500"
+    -#         data-locale="auto"></script>
