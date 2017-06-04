@@ -9,10 +9,15 @@ class CartsController < ApplicationController
   end
 
   def checkout
-    @items = session[:cart]
-    @total_price = 0
-    @items.each do |item|
-      @total_price += item['price']
+    if session[:cart] == nil
+      @empty_cart = true
+    else
+      @items = session[:cart]
+      @total_price = 0
+      @items.each do |item|
+        @total_price += item['price']
+      end
+      @empty_cart = false
     end
   end
 end

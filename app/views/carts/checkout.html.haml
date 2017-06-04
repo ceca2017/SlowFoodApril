@@ -1,7 +1,10 @@
 %h2 Checkout page
 %h3 My Cart Items:
-%ul
-  - @items.each do |item|
-    %li Dish: #{item['name']}
-    %li Price: #{item['price']}
-%h5 Total price: #{@total_price}
+- if @empty_cart
+  %p Your cart is empty
+- else
+  %ul
+    - @items.each do |item|
+      %li Dish: #{item['name']}
+      %li Price: #{item['price']}
+  %h5 Total price: #{@total_price}
