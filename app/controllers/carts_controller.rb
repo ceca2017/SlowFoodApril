@@ -25,4 +25,10 @@ class CartsController < ApplicationController
       @empty_cart = false
     end
   end
+
+  def empty_cart
+    session[:cart] = nil
+    @empty_cart = true
+    render 'checkout'
+  end
 end

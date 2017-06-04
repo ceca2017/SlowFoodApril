@@ -42,3 +42,5 @@ Feature: Show order on checkout page
     And I should see "2650"
     And I should see "mickeyd@mcd.com"
     And I should see "770-555-1231"
+    When I click on link "Empty cart"
+    Then I should see "Your cart is empty"
