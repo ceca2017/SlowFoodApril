@@ -5,6 +5,7 @@
 - else
   %ul
     - @items.each do |item|
-      %li Dish: #{item['name']}
-      %li Price: #{item['price']}
+      %li Restaurant: #{item[1]['name']}
+      %li Dish: #{item[0]['name']}
+      %li Price: #{item[0]['price']}
   %h5 Total price: #{@total_price}
