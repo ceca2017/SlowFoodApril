@@ -14,11 +14,13 @@ class CartsController < ApplicationController
       @empty_cart = true
     else
       @items = session[:cart]
-      binding.pry
       @total_price = 0
       @restaurants = []
       @items.each do |item|
         @total_price += item[0]['price']
+        unless @restaurants.include?(item[1])
+          @restaurants << item[1]
+        end
       end
       @empty_cart = false
     end

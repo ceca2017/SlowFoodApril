@@ -5,7 +5,16 @@
 - else
   %ul
     - @items.each do |item|
+      %li
+        %strong Dish: #{item[0]['name']}
       %li Restaurant: #{item[1]['name']}
-      %li Dish: #{item[0]['name']}
       %li Price: #{item[0]['price']}
   %h5 Total price: #{@total_price}
+
+  %h3 Restaurants to place the order with
+  %ul
+  - @restaurants.each do |restaurant|
+    %li
+      %strong Name: #{restaurant['name']}
+    %li Phone: #{restaurant['phone']}
+    %li Email: #{restaurant['email']}
